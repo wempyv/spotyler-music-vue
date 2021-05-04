@@ -26,9 +26,7 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">
-                  Your Playlist
-                </h5>
+                <h5 class="modal-title" id="exampleModalLabel">Your Playlist</h5>
                 <button
                   type="button"
                   class="btn btn-primary"
@@ -54,10 +52,7 @@
         </div>
       </div>
       <div class="image-album">
-        <img
-          :src="current.imageAlbum"
-          :class="this.isPlaying ? 'rotate' : ''"
-        />
+        <img :src="current.imageAlbum" :class="this.isPlaying ? 'rotate' : ''" />
       </div>
       <div class="content-song mt-4">
         <h5 class="song artist">{{ current.artist }}</h5>
@@ -67,11 +62,7 @@
         <button class="btn btn-dark prev" @click="prev">
           <i class="fa fa-backward"></i>
         </button>
-        <button
-          class="btn btn-primary btn-lg play"
-          v-if="!isPlaying"
-          @click="play"
-        >
+        <button class="btn btn-primary btn-lg play" v-if="!isPlaying" @click="play">
           <i class="fa fa-play"></i>
         </button>
         <button class="btn btn-primary btn-lg play" @click="pause" v-else>
@@ -113,6 +104,18 @@ export default {
           imageAlbum:
             "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e902b262-aeb7-479a-9ef7-6f65bb802e88/d5eadoe-95ed7dbc-dc09-40c7-9547-27efba8772ad.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvZTkwMmIyNjItYWViNy00NzlhLTllZjctNmY2NWJiODAyZTg4XC9kNWVhZG9lLTk1ZWQ3ZGJjLWRjMDktNDBjNy05NTQ3LTI3ZWZiYTg3NzJhZC5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.kfMhTglDHN4qr1Iyy9jSpMsClaVfln_yUkGop1_1uJE",
           src: require("./assets/Music/Taylor Swift - Back To December.mp3"),
+        },
+        {
+          title: "Aib Show Medley",
+          artist: "Aib",
+          imageAlbum: "https://cdn.booooooom.com/wp-content/uploads/2017/11/Lee1.jpg",
+          src: require("./assets/Music/Aib Show Medley.mp3"),
+        },
+        {
+          title: "Reinkarnasi",
+          artist: "Adeavery Feat Ray Prasetya",
+          imageAlbum: "https://cdn.booooooom.com/wp-content/uploads/2017/11/Lee2.jpg",
+          src: require("./assets/Music/Adeavery Reinkarnasi feat Ray Prasetya.mp3"),
         },
       ],
       player: new Audio(),
